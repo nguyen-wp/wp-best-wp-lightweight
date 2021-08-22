@@ -206,7 +206,7 @@ if (!class_exists('WP_Lightweight_Core_Setup')) {
 				Field::make( 'html', 'crb_html_5', __( 'Section Description' ) )
 						->set_html('
 						
-						<p><img src="'.plugin_dir_url(__FILE__) .'admin/assets/img/logo.png"></p>
+						<p><img src="'.plugin_dir_url( __DIR__ ).'/admin/assets/img/logo.png"></p>
 						<h1>Best WP Lightweight</h1>
 						<p>Best WP Lightweight help you configure your websites without any coding knowledge required. Lightweight and using best practices for fastest load time.</p>
 						<hr>
@@ -314,7 +314,7 @@ if (!class_exists('WP_Lightweight_Core_Setup')) {
 				;
 		}
 		function crb_load() {
-			require_once( 'vendor/autoload.php' );
+			require_once plugin_dir_path( __DIR__ ) .'vendor/autoload.php';
 			\Carbon_Fields\Carbon_Fields::boot();
 		}
 	}
