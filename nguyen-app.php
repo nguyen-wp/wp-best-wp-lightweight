@@ -36,10 +36,10 @@ define( 'BEST_WP_LIGHTWEIGHT_NICENAME', 'Best WP Lightweight' );
 define( 'BEST_WP_LIGHTWEIGHT_PREFIX', 'best_wp_lightweight' );
 define( 'BEST_WP_LIGHTWEIGHT_VERSION', '1.0.0' );
 
-require plugin_dir_path( __FILE__ ) . 'setup.php';
-require plugin_dir_path( __FILE__ ) . 'classes/disable_password_reset.php';
-require plugin_dir_path( __FILE__ ) . 'classes/init.php';
-require plugin_dir_path( __FILE__ ) . 'classes/cleanup.php';
+require plugin_dir_path( __FILE__ ) . 'classes/wp_lightweight_setup.php';
+require plugin_dir_path( __FILE__ ) . 'classes/wp_lightweight_disable_password_reset.php';
+require plugin_dir_path( __FILE__ ) . 'classes/wp_lightweight_init.php';
+require plugin_dir_path( __FILE__ ) . 'classes/wp_lightweight_cleanup.php';
 
 /**
  * The code that runs during plugin activation.
