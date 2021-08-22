@@ -229,7 +229,7 @@ if (!class_exists('WP_Lightweight_Core_Init')) {
 
         // ADD SETTING LINK 
         public function ___wp_lightweight_add_setting_link_core(  $links, $file ) {
-            if( $file === 'wp-best-wp-lightweight/nguyen-app.php' ){
+            if( $file === 'wp-best-wp-lightweight/nguyen-app.php' ||  $file === 'best-wp-lightweight/nguyen-app.php' ){
                 $link = '<a href="'.admin_url('admin.php?page=crb_carbon_fields_container_best_wp_lightweight.php').'">'.__('Settings', 'best-wp-lightweight').'</a>';
                 array_unshift( $links, $link ); 
             }
