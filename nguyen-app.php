@@ -17,7 +17,7 @@
  * Plugin URI:        https://wow-wp.com
  * Description:       Best WP Lightweight help you configure your websites without any coding knowledge required. Lightweight and using best practices for fastest load time.
  * Version:           1.0.0
- * Author:            Nguyen Pham
+ * Author:            WOW WordPress
  * Author URI:        https://github.com/baonguyenyam/wp-best-wp-lightweight
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
