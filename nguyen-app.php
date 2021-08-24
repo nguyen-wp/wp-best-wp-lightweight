@@ -14,7 +14,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Best WP Lightweight
- * Plugin URI:        https://wordpress.org/plugins/best-wp-lightweight
+ * Plugin URI:        https://wow-wp.com
  * Description:       Best WP Lightweight help you configure your websites without any coding knowledge required. Lightweight and using best practices for fastest load time.
  * Version:           1.0.0
  * Author:            Nguyen Pham
@@ -31,7 +31,6 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'BEST_WP_LIGHTWEIGHT_DOMAIN', 'best-wp-lightweight' );
 define( 'BEST_WP_LIGHTWEIGHT_NICENAME', 'Best WP Lightweight' );
 define( 'BEST_WP_LIGHTWEIGHT_PREFIX', 'best_wp_lightweight' );
 define( 'BEST_WP_LIGHTWEIGHT_VERSION', '1.0.0' );
