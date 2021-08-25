@@ -60,7 +60,7 @@ class WP_LightWeightCleanUPS {
             }
             if (is_admin() && $arr) {
                 echo '<style>';
-                echo $idhide;
+                echo esc_html__($idhide);
                 echo '</style>';
             }
         };
