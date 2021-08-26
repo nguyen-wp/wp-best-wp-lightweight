@@ -144,26 +144,26 @@ if (!class_exists('WP_Lightweight_Core_Init')) {
         }
         public function ___wp_lightweight_remove_core_update() {
             if(carbon_get_theme_option('___wp_lightweight_remove_core_update')) {
-                // add_filter('pre_option_update_core', '__return_null');
-                // add_filter('pre_site_transient_update_core',array($this, '___wp_lightweight_remove_wp_core_updates'));
+                add_filter('pre_option_update_core', '__return_null');
+                add_filter('pre_site_transient_update_core',array($this, '___wp_lightweight_remove_wp_core_updates'));
             }
         }
         public function ___wp_lightweight_remove_plugins_update() {
             if(carbon_get_theme_option('___wp_lightweight_remove_plugins_update')) {
-                // add_filter('auto_update_plugin', '__return_false' );
-                // add_filter('plugins_auto_update_enabled', '__return_false' );
-                // add_filter('site_transient_update_plugins', '__return_null' );
-                // remove_action('load-update-core.php', 'wp_update_plugins');
-                // add_filter('pre_site_transient_update_plugins',array($this, '___wp_lightweight_remove_wp_core_updates'));
+                add_filter('auto_update_plugin', '__return_false' );
+                add_filter('plugins_auto_update_enabled', '__return_false' );
+                add_filter('site_transient_update_plugins', '__return_null' );
+                remove_action('load-update-core.php', 'wp_update_plugins');
+                add_filter('pre_site_transient_update_plugins',array($this, '___wp_lightweight_remove_wp_core_updates'));
             }
         }
         public function ___wp_lightweight_remove_theme_update() {
             if(carbon_get_theme_option('___wp_lightweight_remove_theme_update')) {
-                // add_filter('auto_update_theme', '__return_false' );
-                // add_filter('themes_auto_update_enabled', '__return_false' );
-                // add_filter('site_transient_update_themes', '__return_null' );
-                // remove_action('load-update-core.php', 'wp_update_themes');
-                // add_filter('pre_site_transient_update_themes',array($this, '___wp_lightweight_remove_wp_core_updates'));
+                add_filter('auto_update_theme', '__return_false' );
+                add_filter('themes_auto_update_enabled', '__return_false' );
+                add_filter('site_transient_update_themes', '__return_null' );
+                remove_action('load-update-core.php', 'wp_update_themes');
+                add_filter('pre_site_transient_update_themes',array($this, '___wp_lightweight_remove_wp_core_updates'));
             }
         }
         public function ___wp_lightweight_remove_wp_core_updates(){
