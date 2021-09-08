@@ -50,18 +50,8 @@ class WP_LightWeightCleanUPS {
             add_filter( 'use_widgets_block_editor', '__return_false' );
         };
         if($this->attrs['removeDashboardbyID']) {
-            $str = preg_replace("/\s+/", "", $this->attrs['removeDashboardbyID']);
-            $arr = array_unique(explode(",",$str));
-            $idhide = '';
-            foreach ($arr as $key => $value) {
-                $idhide .= trim($value)."{display:none!important}";
-                // add_action( 'wp_dashboard_setup_'.trim($value), 'WP_LightWeightCleanUPS::removeDashboardbyID', 10, 1 );
-                // do_action('wp_dashboard_setup_'.trim($value), trim($value));
-            }
-            if (is_admin() && $arr) {
-                echo '<style>';
-                echo esc_html__($idhide);
-                echo '</style>';
+            if (is_admin()) {
+                add_action('admin_head','WP_LightWeightCleanUPS::removeDashboardbyID');
             }
         };
         if($this->attrs['removeNotice']) {
@@ -121,6 +111,17 @@ class WP_LightWeightCleanUPS {
         $wp_admin_bar->remove_menu( 'updates' );
         $wp_admin_bar->remove_menu( 'easy-updates-manager-admin-bar' );
         remove_action( 'admin_notices', 'update_nag' );
+    }
+    public function removeDashboardbyID() {
+        $str = preg_replace("/\s+/", "", carbon_get_theme_option('___wp_lightweight_remove_dashboardbyid'));
+        $arr = array_unique(explode(",",$str));
+        $idhide = '';
+        foreach ($arr as $key => $value) {
+            $idhide .= trim($value)."{display:none!important}";
+        }
+        if(isset($arr) && isset($idhide)) {
+            ?><style><?php echo $idhide;?></style><?php
+        }
     }
     public function removeNotice() {
         ?><style>.notice , .update-plugins, .updated, .update_nag, .update-message.notice {display:none!important}</style><?php

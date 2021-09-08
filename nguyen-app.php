@@ -16,7 +16,7 @@
  * Plugin Name:       WOW Best WP Lightweight
  * Plugin URI:        https://wow-wp.com
  * Description:       Best WP Lightweight help you configure your websites without any coding knowledge required. Lightweight and using best practices for fastest load time.
- * Version:           1.0.0
+ * Version:           2.0.1
  * Author:            WOW WordPress
  * Author URI:        https://github.com/baonguyenyam/wp-best-wp-lightweight
  * License:           GPL-2.0+
@@ -33,7 +33,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 define( 'BEST_WP_LIGHTWEIGHT_NICENAME', 'Best WP Lightweight' );
 define( 'BEST_WP_LIGHTWEIGHT_PREFIX', 'best_wp_lightweight' );
-define( 'BEST_WP_LIGHTWEIGHT_VERSION', '1.0.0' );
+define( 'BEST_WP_LIGHTWEIGHT_VERSION', '2.0.1' );
 
 require plugin_dir_path( __FILE__ ) . 'classes/wp_lightweight_setup.php';
 require plugin_dir_path( __FILE__ ) . 'classes/wp_lightweight_disable_password_reset.php';

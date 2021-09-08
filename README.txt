@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: baonguyenyam
-Tags: system, admin, configure, setup, lightweight
+Tags: system, admin, configure, setup, lightweight, vietnam, vietnamese
 Requires at least: 4.7
 Tested up to: 5.8
-Stable tag: 1.0.0
+Stable tag: 2.0.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -35,5 +35,7 @@ The screenshot is stored in the /assets directory.
 
 == Changelog ==
 
+= 2.0.0 =
+* Change Plugin Name
 = 1.0.0 =
 * First version.
